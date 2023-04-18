@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors({
   credentials:false,
-  origin : "*",
+  origin : "https://genuine-pegasus-c50d9f.netlify.app' ",
 }))
 
 app.use(require('./router/auth'));
