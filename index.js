@@ -1,11 +1,13 @@
 const express = require('express');
-
+const cors =require('cors');
 
 const port = 5000;
 const app = express();
 
 
-
+app.use(cors({
+  origin : "*",
+}))
 
 app.use(require('./router/auth'));
 
