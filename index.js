@@ -5,10 +5,7 @@ const port = 5000;
 const app = express();
 
 
-app.use(cors({
-  credentials:false,
-  origin : "https://genuine-pegasus-c50d9f.netlify.app' ",
-}))
+app.use(cors());
 
 app.use(require('./router/auth'));
 
