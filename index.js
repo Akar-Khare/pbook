@@ -5,7 +5,16 @@ const port = 5000;
 const app = express();
 
 
-app.use(cors());
+app.use(cors(),{
+
+ " Access-Control-Allow-Origin":'http://localhost:3000/',
+
+  "Access-Control-Allow-Credentials": true,
+  
+  "Access-Control-Allow-Methods": 'POST, PUT, PATCH, GET, DELETE, OPTIONS',
+  
+  "Access-Control-Allow-Headers": 'Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization'
+});
 
 app.use(require('./router/auth'));
 
