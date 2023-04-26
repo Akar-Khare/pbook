@@ -8,7 +8,7 @@ const app = express();
 app.use(cors({
 
 
-  "Access-Control-Allow-Credentials": false
+  "Access-Control-Allow-Credentials": 'false'
   
 }));
 
