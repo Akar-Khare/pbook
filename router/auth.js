@@ -27,7 +27,7 @@ router.get('/about', (req, res) => {
 })
 
 
-router.get('/home',isAuthenticated,home);
+router.get('/home',home);
 router.post('/upload',isAuthenticated,newCard);  
 router.post('/delete',isAuthenticated,deleteCard);
 router.post('/register',signUp);
