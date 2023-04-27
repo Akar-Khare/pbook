@@ -6,7 +6,8 @@ exports.isAuthenticated = (
     async (req, res, next) => {
         //console.log("Cookies was "+JSON.stringify(req.cookies)+"ended");
         const { jwtoken } = req.cookies;
-        console.log("PATH :"+ (req.cookies));
+      
+      
         console.log("PATH :"+ (req.route.path));
         if(!jwtoken){  
         if(req.route.path !=="/users") 
