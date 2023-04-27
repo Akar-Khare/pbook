@@ -9,8 +9,8 @@ app.use(cors({
 
 
   origin: "http://localhost:3000",
-  'Access-Control-Allow-Credentials':true,
-  'Access-Control-Allow-Headers':"Content-Type,Accept"
+  'Access-Control-Allow-Credentials':'true'
+  
   
 }));
 
