@@ -5,14 +5,10 @@ const port = 5000;
 const app = express();
 
 
-app.use(cors({
-
-  origin :"https://pictbook69.netlify.app"
-}
-));
+app.use(cors());
 
 app.use(function(req, res, next) {
- 
+  res.header("Access-Control-Allow-Origin", 'https://pictbook69.netlify.app');
   res.header('Access-Control-Allow-Credentials', true);
   res.header( "Access-Control-Expose-Headers", "*")
 //   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
