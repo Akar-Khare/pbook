@@ -17,13 +17,14 @@ exports.signIn = (async (req, res) => {
          if(password === matchingUser.password){
 
           const token = await matchingUser.generateAuthToken();
-          
+          console.log("token:"+token)
 
           res.cookie("jwtoken",token,{
 
             expires: new Date(Date.now()+86400000),
             httpOnly: true
           });
+
           
          res.status(201).json({message: "User login successful"}) ;
          }
