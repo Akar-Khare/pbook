@@ -22,7 +22,8 @@ exports.signIn = (async (req, res) => {
           res.cookie("jwtoken",token,{
 
             expires: new Date(Date.now()+86400000),
-            httpOnly: true
+            httpOnly: true,
+            secure:true
           });
 
           
