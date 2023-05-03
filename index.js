@@ -8,7 +8,6 @@ const app = express();
 app.use(cors({
 origin: 'https://pictbook.onrender.com',
 credentials: true,
-sameSite:'none'
 }));
 
 // app.use(function(req, res, next) {);
