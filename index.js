@@ -5,11 +5,11 @@ const port = 5000;
 const app = express();
 
 
-// app.use(cors({
-// origin: 'https://pictbook69.netlify.app',
-// credentials: true,
-// sameSite:'none'
-// }));
+app.use(cors({
+origin: 'https://pictbook.onrender.com',
+credentials: true,
+sameSite:'none'
+}));
 
 // app.use(function(req, res, next) {);
 
