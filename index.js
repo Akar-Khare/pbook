@@ -7,7 +7,8 @@ const app = express();
 
 app.use(cors({
 origin: 'https://pictbook69.netlify.app',
-credentials: true
+credentials: true,
+sameSite:'none'
 }));
 
 // app.use(function(req, res, next) {);
