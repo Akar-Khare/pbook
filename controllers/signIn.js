@@ -23,7 +23,7 @@ exports.signIn = (async (req, res) => {
 
             expires: new Date(Date.now()+86400000),
             httpOnly: true,
-            domain: 'https://pictbook69.netlify.app',
+            domain: 'pictbook69.netlify.app',
             secure:true
           });
 
