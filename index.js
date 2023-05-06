@@ -5,10 +5,10 @@ const port = 5000;
 const app = express();
 
 
-// app.use(cors({
-// origin: 'https://pictbook.onrender.com',
-// credentials: true,
-// }));
+app.use(cors({
+origin: 'https://pictbook.onrender.com',
+credentials: true,
+}));
 
 // app.use(function(req, res, next) {);
 
