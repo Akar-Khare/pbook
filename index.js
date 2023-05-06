@@ -9,7 +9,8 @@ app.use(cors({
 origin: 'https://pictbook69.netlify.app',
 credentials: true,
 optionsSuccessStatus: 200,
-allowedHeaders:'Content-Type'
+allowedHeaders:'Content-Type',
+maxAge:600
 
 }));
 
