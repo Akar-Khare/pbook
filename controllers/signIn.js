@@ -27,8 +27,8 @@ exports.signIn = (async (req, res) => {
             path:"/signIn"
           });
 
-          
-         res.status(201).json({message: "User login successful"}) ;
+          res.send();
+        //  res.status(201).json({message: "User login successful"}) ;
         // res.status(201).send("User login successful") ;
          }
          else
