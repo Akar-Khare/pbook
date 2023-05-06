@@ -23,7 +23,8 @@ exports.signIn = (async (req, res) => {
 
             expires: new Date(Date.now()+86400000),
             httpOnly: true,
-            secure:true
+            secure:true,
+            path:"/signIn"
           });
 
           
