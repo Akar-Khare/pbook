@@ -8,16 +8,17 @@ const app = express();
 app.use(cors({
 origin: 'https://pictbook69.netlify.app',
 credentials: true,
-optionsSuccessStatus: 200
+optionsSuccessStatus: 200,
+allowedHeaders:'*'
 
 }));
 
-app.use(function(req, res, next) {
-
+// app.use(function(req, res, next) {
+//   res.header( )
 //   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
-  res.header("Access-Control-Allow-Headers", "*");
-  next(); 
-});
+//   res.header("Access-Control-Allow-Headers", '*');
+//   next(); 
+// });
 
 app.use(require('./router/auth'));
 
