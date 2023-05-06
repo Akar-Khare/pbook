@@ -26,8 +26,8 @@ exports.signIn = (async (req, res) => {
             secure:true,
             path:"/login"
           });
-          
-        
+
+        console.log(res);
          res.status(201).json({message: "User login successful"}) ;
         // res.status(201).send("User login successful") ;
          }
