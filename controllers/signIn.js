@@ -24,11 +24,11 @@ exports.signIn = (async (req, res) => {
             expires: new Date(Date.now()+86400000),
             httpOnly: false,
             secure:true,
-            path:"/signIn"
+            path:"/login"
           });
 
-          res.send('HEY');
-        //  res.status(201).json({message: "User login successful"}) ;
+        
+         res.status(201).json({message: "User login successful"}) ;
         // res.status(201).send("User login successful") ;
          }
          else
