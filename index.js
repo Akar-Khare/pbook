@@ -5,7 +5,7 @@ const port = 5000;
 const app = express();
 
 app.use(cors({
-  origin: 'https://pictbook69.netlify.app',
+  origin: ['https://pictbook69.netlify.app','https://pictbook.onrender.com'],
   credentials: true,
   
   allowedHeaders:'content-type',
