@@ -1,4 +1,5 @@
 const express = require('express');
+const cors =require('cors');
 const cookieParser = require('cookie-parser');
 const {signUp} = require('../controllers/signUp');
 const {logOut} = require('../controllers/logOut');
@@ -21,6 +22,10 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 require('../db/conn');
 
+router.use(cors({
+  origin: 'https://pictbook.onrender.com',
+  credentials: true,
+  }));
 
 router.get('/about', (req, res) => {
   res.send('This is about')
