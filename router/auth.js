@@ -1,5 +1,5 @@
 const express = require('express');
-const cors =require('cors');
+
 const cookieParser = require('cookie-parser');
 const {signUp} = require('../controllers/signUp');
 const {logOut} = require('../controllers/logOut');
@@ -38,14 +38,7 @@ router.route('/cards').get(allCards).post(getCards);
 router.get('/users',isAuthenticated,getUsers);
 router.post('/liked',isAuthenticated,liked)
   
-router.use(cors({
-  origin: 'https://pictbook69.netlify.app',
-  credentials: true,
-  
-  allowedHeaders:'Content-Type',
-  
-  
-  }));
+
   
 
 module.exports = router;
