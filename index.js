@@ -6,10 +6,10 @@ const app = express();
 
 
 app.use(cors({
-origin: 'https://pictbook.onrender.com',
+origin: 'https://pictbook69.netlify.app/',
 credentials: true,
-optionsSuccessStatus: 200,
-"Access-Control-Allow-Headers":'*'
+optionsSuccessStatus: 200
+
 }));
 
 // app.use(function(req, res, next) {);
