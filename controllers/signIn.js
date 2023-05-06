@@ -23,8 +23,7 @@ exports.signIn = (async (req, res) => {
 
             expires: new Date(Date.now()+86400000),
             httpOnly: true,
-            secure:true,
-          domain:"onrender.com"
+            secure:true
           });
 
           
