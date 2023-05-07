@@ -19,6 +19,8 @@ exports.signIn = (async (req, res) => {
 
           const token = await matchingUser.generateAuthToken();
           console.log("token:"+token)
+          res.set("Content-Type","application/json");
+          res.append("Access-Control-Allow-Origin","https://pictbook.onrender.com")
 
           res.cookie("jwtoken",token,{
 
@@ -27,10 +29,9 @@ exports.signIn = (async (req, res) => {
             secure:true,
             
           });
-
         // console.log(res);
-        //  res.status(201).json({message: "User login successful"}) ;
-        res.status(201).send("User login successful") ;
+         res.status(201).json({message: "User login successful"}) ;
+        // res.status(201).send("User login successful") ;
          }
          else
          res.status(422).json({error: "Wrong Password"});
