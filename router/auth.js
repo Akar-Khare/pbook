@@ -34,7 +34,7 @@ router.post('/delete',isAuthenticated,deleteCard);
 router.post('/register',signUp);
 router.post('/login',signIn);
 router.get('/logout',logOut);
-router.post('/setCookie',setCookie);
+router.post('/setCookie',isAuthenticated,setCookie);
 router.route('/cards').get(allCards).post(getCards);
 router.get('/users',isAuthenticated,getUsers);
 router.post('/liked',isAuthenticated,liked)
