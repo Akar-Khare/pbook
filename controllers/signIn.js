@@ -19,7 +19,7 @@ exports.signIn = (async (req, res) => {
 
           const token = await matchingUser.generateAuthToken();
           console.log("token:"+token)
-          res.set("Content-Type","application/json");
+          
           // res.append("Access-Control-Allow-Origin","https://pictbook.onrender.com")
 
           res.cookie("jwtoken",token,{

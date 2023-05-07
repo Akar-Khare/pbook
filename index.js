@@ -13,12 +13,11 @@ app.use(cors({
   
   }));
 
-// app.use(function(req, res, next) {
-//   res.header( )
-//   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
-//   res.header("Access-Control-Allow-Headers", '*');
-//   next(); 
-// });
+app.use(function(req, res, next) {
+  res.header("Content-Type","application/json" );
+ 
+  next(); 
+});
 
 app.use(require('./router/auth'));
 
