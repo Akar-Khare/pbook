@@ -12,7 +12,7 @@ const {getUsers} = require('../controllers/getUsers');
 const {allCards} = require('../controllers/allCards');
 const {liked} =  require('../controllers/liked');
 const {deleteCard} = require('../controllers/deleteCard');
-
+const {setCookie} = require('../controllers/setCookie');
 const router = express.Router();
 
 const bodyParser = require('body-parser');
@@ -34,6 +34,7 @@ router.post('/delete',isAuthenticated,deleteCard);
 router.post('/register',signUp);
 router.post('/login',signIn);
 router.get('/logout',logOut);
+router.get('/setCookie',setCookie);
 router.route('/cards').get(allCards).post(getCards);
 router.get('/users',isAuthenticated,getUsers);
 router.post('/liked',isAuthenticated,liked)
