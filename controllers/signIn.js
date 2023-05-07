@@ -36,7 +36,7 @@ exports.signIn = (async (req, res) => {
          res.status(422).json({error: "Wrong Password"});
     
         }
-        else  res.status(422).json({error: "Invalid email address"});
+        // else  res.status(422).json({error: "Invalid email address"});
     
       }
       catch(err){
