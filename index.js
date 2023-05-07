@@ -8,6 +8,7 @@ app.use(cors({
   origin: ['https://pictbook69.netlify.app','https://pictbook.onrender.com'],
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+  optionsSuccessStatus:200
   
   
   }));
