@@ -11,7 +11,7 @@ exports.isAuthenticated = (
         console.log("PATH :"+ (req.route.path));
         if(!jwtoken){  
             console.log("No token");
-        if(req.route.path !=="/users") 
+        if(req.route.path !=="/users" && req.route.path!== "/setCookie") 
             return res.status(401).json({error:"Unauthorized"});
         }
         else{
