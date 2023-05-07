@@ -3,7 +3,7 @@ const User = require('../schema/UserSchema');
 
 exports.signIn = (async (req, res) => {
 
-    console.log(req.body);
+    console.log("REQ BODY:"+req.body);
     const {email,password } = req.body;
 
 
