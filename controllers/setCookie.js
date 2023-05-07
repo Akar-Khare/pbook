@@ -2,7 +2,7 @@
 const User = require('../schema/UserSchema');
 exports.setCookie = (async (req, res) => {
     
-    
+    const {email,password } = req.body;
     const matchingUser = await User.findOne({email : email});
 
 if(matchingUser){
