@@ -3,8 +3,8 @@ const User = require('../schema/UserSchema');
 
 exports.signIn = (async (req, res) => {
 
-    console.log("REQ BODY:"+req.body);
-    const {email,password } = req.body;
+  const {email,password } = req.body;
+  console.log("REQ BODY:"+email);
 
 
     if( !email || !password)
@@ -23,7 +23,7 @@ exports.signIn = (async (req, res) => {
           res.cookie("jwtoken",token,{
 
             expires: new Date(Date.now()+86400000),
-            httpOnly: false,
+            httpOnly: true,
             secure:true,
             
           });
