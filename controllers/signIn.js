@@ -3,8 +3,9 @@ const User = require('../schema/UserSchema');
 
 exports.signIn = (async (req, res) => {
 
-
+    console.log(req.body);
     const {email,password } = req.body;
+
 
     if( !email || !password)
       res.status(422).json({error: "Bad Login"});
