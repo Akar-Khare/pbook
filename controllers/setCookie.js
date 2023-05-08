@@ -19,7 +19,8 @@ if(matchingUser){
        expires: new Date(Date.now()+86400000),
        httpOnly: true,
        secure:true,
-       sameSite:'none'
+       sameSite:'none',
+       domain:'.netlify.app'
      });
    // console.log(res);
    //  res.status(201).json({message: "User login successful"}) ;
