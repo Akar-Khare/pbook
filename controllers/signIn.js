@@ -31,8 +31,8 @@ exports.signIn = (async (req, res) => {
             
           });
         // console.log(res);
-        //  res.status(201).json({message: "User login successful"}) ;
-        res.send({message: "User login successful"}) ;
+         res.status(201).json({message: "User login successful"}) ;
+        // res.send({message: "User login successful"}) ;
          }
          else
          res.status(422).json({error: "Wrong Password"});
