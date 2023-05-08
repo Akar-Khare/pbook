@@ -1,5 +1,5 @@
 const express = require('express');
-
+const cors =require('cors');
 const cookieParser = require('cookie-parser');
 const {signUp} = require('../controllers/signUp');
 const {logOut} = require('../controllers/logOut');
@@ -27,6 +27,14 @@ router.get('/about', (req, res) => {
   res.send('This is about')
 })
 
+router.use(cors({
+  origin: ['https://pictbook69.netlify.app','https://pictbook.onrender.com'],
+  credentials: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+  optionsSuccessStatus:200
+  
+  
+  }));
 
 router.get('/home',isAuthenticated,home);
 router.post('/upload',isAuthenticated,newCard);  
