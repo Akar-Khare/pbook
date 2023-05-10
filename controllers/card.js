@@ -4,7 +4,7 @@ exports.newCard = (async (req, res) => {
   
    
 
-  const{key, link, name ,desc} = req.body;
+  const{key, imgData, name ,desc} = req.body;
 
   const userId =  req.user._id;
   const userName = req.user.name;
