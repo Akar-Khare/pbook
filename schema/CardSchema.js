@@ -6,7 +6,7 @@ const cardSchema = new mongoose.Schema({
     userName: String,
     card:{
             key: String,
-            link :  String,
+            link : String,
             name: String,
             desc: String,
             likesCount : {type: Number, default:0},
