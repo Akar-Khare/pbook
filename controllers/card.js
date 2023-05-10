@@ -15,7 +15,7 @@ exports.newCard = (async (req, res) => {
     const newCard = new Card({
     userId, 
     userName,
-    card: {key,link,name,desc,count:0,likedBy:[]}
+    card: {key,imgData,name,desc,count:0,likedBy:[]}
     })
     
     newCard.save();
