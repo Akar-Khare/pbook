@@ -40,7 +40,7 @@ router.get('/home',isAuthenticated,home);
 router.post('/upload',isAuthenticated,newCard);  
 router.post('/delete',isAuthenticated,deleteCard);
 router.post('/register',signUp);
-router.post('/login',signIn);
+// router.post('/login',signIn);
 router.get('/logout',logOut);
 router.post('/setCookie',isAuthenticated,setCookie);
 router.route('/cards').get(allCards).post(getCards);
