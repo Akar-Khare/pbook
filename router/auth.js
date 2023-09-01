@@ -28,7 +28,7 @@ router.get('/about', (req, res) => {
 })
 
 router.use(cors({
-  origin: ['https://pictbook69.netlify.app','https://pictbook.onrender.com'],
+  origin: ['https://pictbook.netlify.app','https://pictbook.onrender.com'],
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   optionsSuccessStatus:200
