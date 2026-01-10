@@ -20,7 +20,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.5",
     "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0"
+    "serverless-http": "^3.2.0",
+    "ws": "^8.15.1"
   },
   "devDependencies": {
     "webpack": "^5.79.0",

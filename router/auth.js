@@ -13,6 +13,8 @@ const {allCards} = require('../controllers/allCards');
 const {liked} =  require('../controllers/liked');
 const {deleteCard} = require('../controllers/deleteCard');
 const {setCookie} = require('../controllers/setCookie');
+
+
 const router = express.Router();
 
 const bodyParser = require('body-parser');
@@ -28,7 +30,7 @@ router.get('/about', (req, res) => {
 })
 
 router.use(cors({
-  origin: ['https://pictbook.netlify.app','https://pictbook.onrender.com'],
+  origin: ['https://pictbook.netlify.app','https://pictbook.onrender.com','http://localhost:5173'],
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   optionsSuccessStatus:200
@@ -45,7 +47,18 @@ router.get('/logout',logOut);
 router.post('/setCookie',isAuthenticated,setCookie);
 router.route('/cards').get(allCards).post(getCards);
 router.get('/users',isAuthenticated,getUsers);
-router.post('/liked',isAuthenticated,liked)
+router.post('/liked',isAuthenticated,liked);
+
+//TailorPro
+const {addCustomer} = require('../controllers/addCustomer');
+const {getCustomer} = require('../controllers/getCustomer');
+const {updateCustomer} = require('../controllers/updateCustomer');
+router.get('/customer',getCustomer);
+router.post('/customer',addCustomer);
+router.put('/customer/:id',updateCustomer);
+
+// 
+
   
 
   
