@@ -30,7 +30,7 @@ router.get('/about', (req, res) => {
 })
 
 router.use(cors({
-  origin: ['https://pictbook.netlify.app','https://pictbook.onrender.com','http://localhost:5173','http://tailorpro.netlify.app'],
+  origin: ['https://pictbook.netlify.app','https://pictbook.onrender.com','http://localhost:5173','https://tailorpro.netlify.app'],
   credentials: true,
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   optionsSuccessStatus:200
